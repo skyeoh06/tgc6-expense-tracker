@@ -24,6 +24,11 @@ SESSION_KEY = os.environ.get('SESSION_KEY')
 app.secret_key = SESSION_KEY
 
 # START WRITING YOUR CODE
+# this is the route that collects the user data with the form
+@app.route('/expense/create')
+def show_create_form():
+    return render_template('create_expenses.template.html')
+
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':

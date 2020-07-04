@@ -1,0 +1,27 @@
+{% extends 'layout.template.html' %}		
+		
+{%block title%}Create New Task{%endblock%}		
+		
+{%block content%}		
+<form method="POST">		
+	<h1>Create New Expense</h1>	
+	<div>	
+		<label>Expenditure Name:</label>
+		<input type="text" name="expense-name" class="form-control" placeholder="eg.Pay for bills"/>
+	</div>	
+	<div>	
+		<label>Expense Date:</label>
+		<input type="date" name="expense-date" class="form-control"/>
+	</div>	
+	<div>	
+        <label>Type:</label> 
+		<label class="radio-inline"><input type="radio" name="type-credit" checked>Credit</label>
+        <label class="radio-inline"><input type="radio" name="type-debit">Debit</label>
+	</div>	
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="expense-reconcile">
+        <label class="form-check-label" for="expense-reconcile">Is it Reconcile</label>
+    </div>
+	<input type="submit" value="Create" class="btn btn-primary mt-2"/>	
+</form>		
+{%endblock%}		
